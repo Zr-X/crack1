@@ -23,6 +23,7 @@ git pull
 python syah.py
 
 YG UDAH DOWNLOAD
+
 cd crack1
 
 git pull
